@@ -1,6 +1,6 @@
 # CSS-SFML
 
-A CSS-inspired styling library for [SFML 3.0](https://www.sfml-dev.org/) — part of the **KoP Engine** ecosystem.
+A CSS-inspired styling library for [SFML 3.0](https://www.sfml-dev.org/).
 
 ```cpp
 CSS::init(window);
@@ -51,7 +51,7 @@ Units: `px` `%` `vw` `vh` — camelCase aliases accepted.
 
 Built on top of **SFML** by Laurent Gomila — [sfml-dev.org](https://www.sfml-dev.org/)
 
-**css-sfml** is developed by [Kaguyo](https://github.com/kaguyo) as part of KoP Engine.  
+**CSS-SFML** is developed by [Kaguyo](https://github.com/kaguyo) as part of KoP Engine.  
 Licensed under the [zlib License](./LICENSE).
 
 > If this library was useful to your project, a credit — *"Powered by KoP Engine — by Kaguyo"* — is appreciated but not required.
