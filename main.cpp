@@ -7,7 +7,6 @@ int main() {
 
     CSS::init(window);
 
-    // Card centered in window
     auto card = sf::RectangleShape();
     CSS::Style(card, {
         "width: 90%",
@@ -15,16 +14,15 @@ int main() {
         "background-color: #1e1e2e",
         "border-color: #89b4fa",
         "border-width: 2px",
-        "position: center"
+        "position: center" // Custom aditional css property
     });
 
-    // Button — 80% of card width, positioned inside card
     auto btn = sf::RectangleShape();
     CSS::Style(btn, {
         "width: 48px",
         "height: 48px",
         "background-color: #ffffff"
-    }, CSS::wrap(card));
+    }, CSS::wrap(card)); // Wrap is required to resolve the element's type within the factory
 
     // Arrange card children via flex — no parent, with children
     CSS::Style(card, {
