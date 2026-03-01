@@ -8,8 +8,7 @@ namespace adapters {
 // setSize scales the shape uniformly to fit the requested bounding box.
 class ConvexAdapter final : public ShapeAdapterBase<sf::ConvexShape> {
 public:
-    explicit ConvexAdapter(sf::ConvexShape& s)
-        : ShapeAdapterBase(s) {}
+    explicit ConvexAdapter(sf::ConvexShape& s): ShapeAdapterBase(s) {}
 
     void setSize(sf::Vector2f target) override {
         auto current = getSize();

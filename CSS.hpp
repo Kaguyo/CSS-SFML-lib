@@ -29,10 +29,8 @@ public:
 
     // Overload 1: no parent, no children
     template<typename T>
-    static void Style(
-        T&                              element,
-        const std::vector<std::string>& rules
-    ) {
+    static void Style(T& element, const std::vector<std::string>& rules)
+    {
         assertInitialised();
         Styleable self = adapters::AdapterFactory::make(element);
         std::optional<Styleable> noParent;
@@ -43,11 +41,8 @@ public:
 
     // Overload 2: with parent, no children
     template<typename T>
-    static void Style(
-        T&                              element,
-        const std::vector<std::string>& rules,
-        Styleable                       parent
-    ) {
+    static void Style(T& element, const std::vector<std::string>& rules, Styleable parent)
+    {
         assertInitialised();
         Styleable self = adapters::AdapterFactory::make(element);
         std::optional<Styleable> optParent = parent;
@@ -58,11 +53,8 @@ public:
 
     // Overload 3: no parent, with children
     template<typename T>
-    static void Style(
-        T&                              element,
-        const std::vector<std::string>& rules,
-        StyleableList                   children
-    ) {
+    static void Style(T& element, const std::vector<std::string>& rules, StyleableList children)
+    {
         assertInitialised();
         Styleable self = adapters::AdapterFactory::make(element);
         std::optional<Styleable> noParent;
@@ -74,12 +66,8 @@ public:
 
     // Overload 4: with parent and children
     template<typename T>
-    static void Style(
-        T&                              element,
-        const std::vector<std::string>& rules,
-        Styleable                       parent,
-        StyleableList                   children
-    ) {
+    static void Style(T& element, const std::vector<std::string>& rules, Styleable parent, StyleableList children)
+    {
         assertInitialised();
         Styleable self = adapters::AdapterFactory::make(element);
         std::optional<Styleable> optParent = parent;

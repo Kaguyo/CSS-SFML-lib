@@ -22,7 +22,6 @@ namespace core {
 //    • property name lowercased and camelCase aliases resolved to kebab-case
 //    • lines without ':' are silently skipped
 // ─────────────────────────────────────────────────────────────────────────────
-
 struct RuleParser {
 
     static std::vector<contracts::Declaration>

@@ -6,8 +6,7 @@ namespace adapters {
 
 class RectAdapter final : public ShapeAdapterBase<sf::RectangleShape> {
 public:
-    explicit RectAdapter(sf::RectangleShape& s)
-        : ShapeAdapterBase(s) {}
+    explicit RectAdapter(sf::RectangleShape& s): ShapeAdapterBase(s) {}
 
     // RectangleShape has an explicit setSize / getSize pair
     void setSize(sf::Vector2f sz) override {

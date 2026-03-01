@@ -20,7 +20,6 @@ namespace adapters {
 //    auto btn = sf::RectangleShape();
 //    contracts::Styleable s = AdapterFactory::make(btn);
 // ─────────────────────────────────────────────────────────────────────────────
-
 struct AdapterFactory {
     template<typename T>
     static contracts::Styleable make(T& element) {

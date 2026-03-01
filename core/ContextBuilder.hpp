@@ -19,11 +19,8 @@ namespace core {
 
 struct ContextBuilder {
 
-    static contracts::StyleContext build(
-        contracts::Styleable&                    self,
-        std::optional<contracts::Styleable>&     parent,
-        sf::RenderWindow&                        window
-    ) {
+    static contracts::StyleContext build(contracts::Styleable& self, std::optional<contracts::Styleable>& parent, sf::RenderWindow& window)
+    {
         contracts::StyleContext ctx;
         ctx.self       = self;
         ctx.windowSize = sf::Vector2f(window.getSize());

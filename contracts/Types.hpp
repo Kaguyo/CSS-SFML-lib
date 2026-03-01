@@ -16,13 +16,11 @@ namespace contracts {
 //  Styleable — lightweight copyable handle over any IStyleable implementation.
 //  Internally holds a shared_ptr so copies are cheap and the handle is nullable.
 // ─────────────────────────────────────────────────────────────────────────────
-
 class Styleable {
 public:
     Styleable() = default;
 
-    explicit Styleable(std::shared_ptr<IStyleable> impl)
-        : impl_(std::move(impl)) {}
+    explicit Styleable(std::shared_ptr<IStyleable> impl): impl_(std::move(impl)) {}
 
     IStyleable* operator->() const { return impl_.get(); }
     IStyleable& operator*()  const { return *impl_; }
@@ -39,7 +37,6 @@ using StyleableList = std::vector<Styleable>;
 // ─────────────────────────────────────────────────────────────────────────────
 //  Declaration — one parsed CSS rule: "background-color" → "#1e1e2e"
 // ─────────────────────────────────────────────────────────────────────────────
-
 struct Declaration {
     std::string property;   // normalised to lowercase-kebab-case
     std::string value;      // trimmed raw value string
@@ -48,7 +45,6 @@ struct Declaration {
 // ─────────────────────────────────────────────────────────────────────────────
 //  BoxModel — resolved padding and margin values
 // ─────────────────────────────────────────────────────────────────────────────
-
 struct BoxModel {
     float paddingTop    = 0.f, paddingRight  = 0.f,
           paddingBottom = 0.f, paddingLeft   = 0.f;
@@ -69,7 +65,6 @@ struct BoxModel {
 // ─────────────────────────────────────────────────────────────────────────────
 //  FlexLayout — layout intent parsed from display/flex-* properties
 // ─────────────────────────────────────────────────────────────────────────────
-
 struct FlexLayout {
     bool enabled = false;
     bool column  = false;   // true → flex-direction: column
@@ -90,7 +85,6 @@ struct FlexLayout {
 // ─────────────────────────────────────────────────────────────────────────────
 //  PositionMode — how the element is positioned relative to its container
 // ─────────────────────────────────────────────────────────────────────────────
-
 enum class PositionMode {
     Default,    // flow — positioned by parent flex or explicit left/top
     Relative,   // offset from parent origin
@@ -102,7 +96,6 @@ enum class PositionMode {
 //  StyleContext — full resolved context for one Style() call.
 //  Passed by reference through every layer of the pipeline.
 // ─────────────────────────────────────────────────────────────────────────────
-
 struct StyleContext {
     // The element being styled
     Styleable self;
@@ -113,7 +106,7 @@ struct StyleContext {
     sf::Vector2f windowSize;    // always the render window size
 
     // Parsed box model (filled during pass 1)
-    BoxModel   box;
+    BoxModel box;
 
     // Flex layout intent (filled during pass 1)
     FlexLayout flex;

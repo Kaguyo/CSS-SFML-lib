@@ -6,8 +6,7 @@ namespace adapters {
 
 class CircleAdapter final : public ShapeAdapterBase<sf::CircleShape> {
 public:
-    explicit CircleAdapter(sf::CircleShape& s)
-        : ShapeAdapterBase(s) {}
+    explicit CircleAdapter(sf::CircleShape& s): ShapeAdapterBase(s) {}
 
     // width/height on a circle → radius = min(w,h) / 2
     void setSize(sf::Vector2f sz) override {
