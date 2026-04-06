@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "CSS.hpp"
+#include "./Headers/CSS.hpp"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode({1280, 720}), "CSS SFML Library - Test");
@@ -9,7 +9,7 @@ int main() {
 
     auto card = sf::RectangleShape();
     CSS::Style(card, {
-        "width: 90%",
+        "width: 100%",
         "height: 90%",
         "background-color: #1e1e2e",
         "border-color: #89b4fa",
@@ -20,7 +20,7 @@ int main() {
     auto btn = sf::RectangleShape();
     CSS::Style(btn, {
         "width: 48px",
-        "height: 48px",
+        "height: 418px",
         "background-color: #ffffff"
     }, CSS::wrap(card)); // Wrap is required to resolve the element's type within the factory
 

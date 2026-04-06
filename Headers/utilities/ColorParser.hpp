@@ -22,7 +22,6 @@ namespace utilities {
 // ─────────────────────────────────────────────────────────────────────────────
 
 struct ColorParser {
-
     static sf::Color parse(const std::string& raw) {
         std::string s = StringUtils::trim(raw);
 
