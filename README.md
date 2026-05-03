@@ -139,5 +139,7 @@ ________________________________________________________________________
 
 Built on top of **SFML** by Laurent Gomila — [sfml-dev.org](https://www.sfml-dev.org/)
 
+```
+
 **CSS-SFML** is developed by [Kaguyo](https://github.com/kaguyo).  
 Licensed under the [MIT License](./LICENSE).
