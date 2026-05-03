@@ -134,11 +134,6 @@ ________________________________________________________________________
 2. The *Core* takes CSS rules and uses *Contracts* to understand and validate what properties apply to those objects.  
 3. When applying styles, the core uses *Utilities* to parse and compute values (e.g., convert units).  
 4. Results are translated back through *Adapters* to update the real SFML objects with the computed styles.
-```
-### Design patterns: 
-`Adapter` `Factory` `Facade`
-
----
 
 ## Credits
 
